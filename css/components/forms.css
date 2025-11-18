@@ -1,0 +1,62 @@
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--muted);
+    background: #fff;
+    font-size: 1rem;
+}
+
+.input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.12);
+    border-color: var(--color-primary);
+}
+
+
+.input-inline {
+    display: inline-block;
+    width: auto;
+}
+
+
+.form-row {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.form-row>* {
+    flex: 1;
+}
+
+
+.help-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+
+/* small form validation */
+.input-error {
+    border-color: var(--color-error);
+}
+
+.form-error {
+    color: var(--color-error);
+    font-size: 0.9rem;
+}

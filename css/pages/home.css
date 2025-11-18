@@ -1,0 +1,34 @@
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+
+.dashboard-hero {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}
+
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+
+@media (max-width:900px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

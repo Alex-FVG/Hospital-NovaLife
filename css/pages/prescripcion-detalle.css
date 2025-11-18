@@ -1,0 +1,12 @@
+.prescripcion-form {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: var(--spacing-lg);
+}
+
+
+@media (max-width:900px) {
+    .prescripcion-form {
+        grid-template-columns: 1fr;
+    }
+}

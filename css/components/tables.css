@@ -1,0 +1,31 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.table th,
+.table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.table thead {
+    background: #F7F9FB;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background: rgba(26, 115, 232, 0.03);
+}
+
+
+.table .actions {
+    display: flex;
+    gap: 8px;
+}

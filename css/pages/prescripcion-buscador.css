@@ -1,0 +1,13 @@
+.search-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+}
+
+.results-list {
+    margin-top: var(--spacing-md);
+}

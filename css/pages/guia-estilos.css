@@ -1,0 +1,23 @@
+.guide-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-lg);
+}
+
+.color-swatch {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.color-block {
+    width: 120px;
+    height: 60px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+}

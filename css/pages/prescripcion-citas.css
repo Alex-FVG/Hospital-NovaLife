@@ -1,0 +1,7 @@
+.citas-list {
+    display: block;
+}
+
+.citas-list .table {
+    margin-top: var(--spacing-md);
+}
