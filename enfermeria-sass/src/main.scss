@@ -1,101 +1,173 @@
-@use 'layout';
-@use 'components';
-@use 'pages';
-@use 'variables';
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@use "sass:color";
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: $font-main;
+    background-color: $bg-body;
+    color: $dark;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+// Navigation
+.navbar {
+    background-color: $accent;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $shadow-md;
+
+    .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+
+            &.active {
+                color: white;
+                font-weight: 700;
+                border-bottom: 2px solid white;
+            }
+        }
+    }
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+h1.page-title {
+    color: $accent;
+    border-left: 5px solid $primary;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
 }
 
-.card {
-  padding: 2em;
+// Dashboard Grid
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-.read-the-docs {
-  color: #888;
+.vital-card {
+    @include card-style;
+    border-top: 4px solid $primary;
+
+    h3 {
+        margin-top: 0;
+        color: $gray;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $dark;
+        margin: 0.5rem 0;
+    }
+
+    .unit {
+        font-size: 1rem;
+        color: $gray;
+    }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+// Bed Map
+.bed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.bed-card {
+    @include card-style;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+
+    .bed-icon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        color: $gray;
+    }
+
+    .bed-number {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    &.occupied {
+        .bed-icon {
+            color: $danger;
+        }
+
+        border: 1px solid color.scale($danger, $lightness: 30%);
+        background-color: color.scale($danger, $lightness: 45%);
+    }
+
+    &.free {
+        .bed-icon {
+            color: $success;
+        }
+
+        border: 1px solid color.scale($success, $lightness: 30%);
+    }
+
+    &.cleaning {
+        .bed-icon {
+            color: $warning;
+        }
+
+        border: 1px solid color.scale($warning, $lightness: 30%);
+        background-color: color.scale($warning, $lightness: 50%);
+    }
+}
+
+// Medication Table
+.med-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: $shadow-sm;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    th {
+        background-color: color.scale($accent, $lightness: 55%);
+        color: $accent;
+        font-weight: 600;
+    }
+
+    tr:hover {
+        background-color: #fafafa;
+    }
 }
