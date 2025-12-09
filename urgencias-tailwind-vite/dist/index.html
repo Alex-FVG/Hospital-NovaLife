@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urgencias - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Assuming main.js imports main.css -->
+  <script type="module" crossorigin src="./assets/main-BUJ6AB9R.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-UDGdHEqH.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-red-600 font-bold text-xl tracking-tight">URGENCIAS</span>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a href="../../home.html"
+              class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              Inicio Global
+            </a>
+            <a href="index.html"
+              class="border-red-500 text-slate-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              Panel Principal
+            </a>
+            <a href="registro.html"
+              class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              Registro
+            </a>
+            <a href="triaje.html"
+              class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              Triaje
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="registro.html"
+              class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+              + Nueva Admisión
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <!-- Stats -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+      <div class="bg-white overflow-hidden shadow rounded-lg border-l-4 border-l-red-500">
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-sm font-medium text-slate-500 truncate">En Espera (Triaje)</dt>
+          <dd class="mt-1 text-3xl font-semibold text-slate-900">12</dd>
+        </div>
+      </div>
+      <div class="bg-white overflow-hidden shadow rounded-lg border-l-4 border-l-orange-500">
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-sm font-medium text-slate-500 truncate">En Boxes</dt>
+          <dd class="mt-1 text-3xl font-semibold text-slate-900">8</dd>
+        </div>
+      </div>
+      <div class="bg-white overflow-hidden shadow rounded-lg border-l-4 border-l-blue-500">
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-sm font-medium text-slate-500 truncate">Observación</dt>
+          <dd class="mt-1 text-3xl font-semibold text-slate-900">5</dd>
+        </div>
+      </div>
+      <div class="bg-white overflow-hidden shadow rounded-lg border-l-4 border-l-emerald-500">
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-sm font-medium text-slate-500 truncate">Altas (Hoy)</dt>
+          <dd class="mt-1 text-3xl font-semibold text-slate-900">24</dd>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bg-white shadow overflow-hidden sm:rounded-md">
+      <div class="border-b border-gray-200 px-4 py-5">
+        <h3 class="text-lg leading-6 font-medium text-gray-900">Pacientes Recientes</h3>
+      </div>
+      <ul role="list" class="divide-y divide-gray-200">
+        <li>
+          <a href="#" class="block hover:bg-gray-50">
+            <div class="px-4 py-4 sm:px-6">
+              <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-red-600 truncate">Sra. Martínez, L.</p>
+                <div class="ml-2 flex-shrink-0 flex">
+                  <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Urgencia
+                    Vital</span>
+                </div>
+              </div>
+              <div class="mt-2 sm:flex sm:justify-between">
+                <div class="sm:flex">
+                  <p class="flex items-center text-sm text-gray-500">
+                    Dolor torácico
+                  </p>
+                </div>
+                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
+                  <p>Hace 10 min</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block hover:bg-gray-50">
+            <div class="px-4 py-4 sm:px-6">
+              <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-indigo-600 truncate">Sr. Gómez, P.</p>
+                <div class="ml-2 flex-shrink-0 flex">
+                  <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Leve</span>
+                </div>
+              </div>
+              <div class="mt-2 sm:flex sm:justify-between">
+                <div class="sm:flex">
+                  <p class="flex items-center text-sm text-gray-500">
+                    Esguince tobillo
+                  </p>
+                </div>
+                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
+                  <p>Hace 35 min</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
