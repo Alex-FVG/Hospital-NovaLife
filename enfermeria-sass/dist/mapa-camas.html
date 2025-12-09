@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfermería - Mapa de Camas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/main-BaNQg2_X.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-WSFmC4Tz.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="brand">Enfermería</div>
+            <div class="nav-links">
+                <a href="../../home.html">Inicio</a>
+                <a href="index.html">Monitor</a>
+                <a href="mapa-camas.html" class="active">Mapa de Camas</a>
+                <a href="hoja-medicacion.html">Medicación</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1 class="page-title">Mapa de Camas - Planta 1</h1>
+
+            <div class="bed-grid">
+                <!-- Row 1 -->
+                <div class="bed-card occupied">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">101</div>
+                    <small>Ocupada</small>
+                </div>
+                <div class="bed-card occupied">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">102</div>
+                    <small>Ocupada</small>
+                </div>
+                <div class="bed-card free">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">103</div>
+                    <small>Libre</small>
+                </div>
+                <!-- Corrected 103 status to free for visual variety based on prev plan, though styling class handles color -->
+
+                <div class="bed-card cleaning">
+                    <div class="bed-icon">🧹</div>
+                    <div class="bed-number">104</div>
+                    <small>Limpieza</small>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="bed-card free">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">105</div>
+                    <small>Libre</small>
+                </div>
+                <div class="bed-card occupied">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">106</div>
+                    <small>Ocupada</small>
+                </div>
+                <div class="bed-card free">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">107</div>
+                    <small>Libre</small>
+                </div>
+                <div class="bed-card free">
+                    <div class="bed-icon">🛏️</div>
+                    <div class="bed-number">108</div>
+                    <small>Libre</small>
+                </div>
+            </div>
+
+            <div style="margin-top:2rem; display:flex; gap:1rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <div style="width:16px; height:16px; background:#e74c3c; border-radius:50%;"></div> Ocupada
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <div style="width:16px; height:16px; background:#2ecc71; border-radius:50%;"></div> Libre
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <div style="width:16px; height:16px; background:#f1c40f; border-radius:50%;"></div> Limpieza
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
