@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Listado de Citas - NovaLife</title>
-<link rel="stylesheet" href="../../css/main.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Listado de Citas - NovaLife</title>
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
+
 <body>
-<header class="header container">
-<div class="brand">Listado de Citas</div>
-<div class="nav-links">
-<a class="btn btn-ghost" href="/home.html">Inicio</a>
-<a class="btn btn-ghost" href="/funcionalidades/prescripcion/citas-lista.html">Prescripciones</a>
-<a class="btn btn-ghost" href="/guia-estilos.html">Guía de estilos</a>
-</div>
-</header>
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <div class="brand" style="font-weight:700; font-size:1.5rem; color:var(--primary);">Listado de Citas</div>
+            <div class="nav-links">
+                <a class="btn btn-ghost" href="../../home.html">Inicio</a>
+                <a class="btn btn-ghost" href="citas-lista.html">Prescripciones</a>
+                <a class="btn btn-ghost" href="../../guia-estilos.html">Guía de estilos</a>
+            </div>
+        </div>
+    </header>
 
 
-<main class="main container">
-<section class="citas-list">
-<div class="card">
-<div class="card-heading">
-<div class="card-title">Citas próximas</div>
-<div class="card-subtitle">Filtrar por fecha o urgencia</div>
-</div>
+    <main class="main container">
+        <section class="citas-list">
+            <div class="card">
+                <div class="card-heading">
+                    <div class="card-title">Citas próximas</div>
+                    <div class="card-subtitle">Filtrar por fecha o urgencia</div>
+                </div>
 
 
-<table class="table">
-<thead>
-<tr><th>Paciente</th><th>DNI</th><th>Fecha</th><th>Hora</th><th>Acciones</th></tr>
-</thead>
-<tbody>
-<tr>
-<td>María López</td>
-<td>12345678A</td>
-<td>20/11/2025</td>
-<td>09:30</td>
-<td class="actions"><a class="btn btn-secondary" href="cita-detalle.html">Ver</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</main>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>DNI</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>María López</td>
+                            <td>12345678A</td>
+                            <td>20/11/2025</td>
+                            <td>09:30</td>
+                            <td class="actions"><a class="btn btn-secondary" href="cita-detalle.html">Ver</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

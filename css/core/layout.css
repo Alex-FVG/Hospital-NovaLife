@@ -1,63 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utilities */
 .container {
-    max-width: 1120px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    padding: 0 1.5rem;
 }
 
-
-.app-grid {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: var(--spacing-lg);
-    min-height: 100vh;
-}
-
-
-.sidebar {
-    background: var(--surface);
-    padding: var(--spacing-md);
-    border-right: 1px solid var(--muted);
-}
-
-
-.header {
-    background: var(--surface);
-    padding: var(--spacing-md);
-    border-bottom: 1px solid var(--muted);
+.flex {
     display: flex;
+}
+
+.items-center {
     align-items: center;
+}
+
+.justify-between {
     justify-content: space-between;
-    min-width: 100%;
-    
 }
 
-
-.main {
-    padding: var(--spacing-lg);
+.justify-center {
+    justify-content: center;
 }
 
-
-.card {
-    background: var(--surface);
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+.gap-2 {
+    gap: 0.5rem;
 }
 
+.gap-4 {
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
 
 .text-muted {
     color: var(--text-muted);
-    font-size: 0.95rem;
 }
 
+.text-primary {
+    color: var(--primary);
+}
 
-/* Responsive helpers */
-@media (max-width: 900px) {
-    .app-grid {
-        grid-template-columns: 1fr;
-    }
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 1rem 0;
+}
 
-    .sidebar {
-        order: 2;
-    }
+.nav-links a {
+    margin-left: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
 }
