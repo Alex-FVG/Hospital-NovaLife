@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgencias - Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="./src/main.js"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-red-600 font-bold text-xl tracking-tight">URGENCIAS</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="../home.html"
+                            class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Inicio</a>
+                        <a href="index.html"
+                            class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Panel</a>
+                        <a href="registro.html"
+                            class="border-red-500 text-slate-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Registro</a>
+                        <a href="triaje.html"
+                            class="border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Triaje</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+            <div class="md:col-span-1">
+                <div class="px-4 sm:px-0">
+                    <h3 class="text-lg font-medium leading-6 text-gray-900">Datos del Paciente</h3>
+                    <p class="mt-1 text-sm text-gray-600">
+                        Información básica para la admisión en urgencias.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-5 md:mt-0 md:col-span-2">
+                <form action="#" method="POST">
+                    <div class="shadow sm:rounded-md sm:overflow-hidden">
+                        <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+
+                            <div class="grid grid-cols-6 gap-6">
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="first-name"
+                                        class="block text-sm font-medium text-gray-700">Nombre</label>
+                                    <input type="text" name="first-name" id="first-name"
+                                        class="mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-2 border">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="last-name"
+                                        class="block text-sm font-medium text-gray-700">Apellidos</label>
+                                    <input type="text" name="last-name" id="last-name"
+                                        class="mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-2 border">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="dni" class="block text-sm font-medium text-gray-700">DNI /
+                                        Pasaporte</label>
+                                    <input type="text" name="dni" id="dni"
+                                        class="mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-2 border">
+                                </div>
+
+                                <div class="col-span-6">
+                                    <label for="sintomas" class="block text-sm font-medium text-gray-700">Motivo de
+                                        consulta / Síntomas</label>
+                                    <div class="mt-1">
+                                        <textarea id="sintomas" name="sintomas" rows="3"
+                                            class="shadow-sm focus:ring-red-500 focus:border-red-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-2"
+                                            placeholder="Describa brevemente los síntomas..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="arrival-mode" class="block text-sm font-medium text-gray-700">Modo de
+                                        llegada</label>
+                                    <select id="arrival-mode" name="arrival-mode"
+                                        class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm">
+                                        <option>Ambulancia</option>
+                                        <option>Propia voluntad</option>
+                                        <option>Derivado por médico</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                            <button type="submit"
+                                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                                Registrar Admisión
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

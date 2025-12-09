@@ -1,0 +1,172 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+body {
+    font-family: $font-main;
+    background-color: $bg-body;
+    color: $dark;
+    margin: 0;
+    padding: 0;
+}
+
+// Navigation
+.navbar {
+    background-color: $accent;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $shadow-md;
+
+    .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+
+            &.active {
+                color: white;
+                font-weight: 700;
+                border-bottom: 2px solid white;
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1.page-title {
+    color: $accent;
+    border-left: 5px solid $primary;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+// Dashboard Grid
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.vital-card {
+    @include card-style;
+    border-top: 4px solid $primary;
+
+    h3 {
+        margin-top: 0;
+        color: $gray;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $dark;
+        margin: 0.5rem 0;
+    }
+
+    .unit {
+        font-size: 1rem;
+        color: $gray;
+    }
+}
+
+// Bed Map
+.bed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.bed-card {
+    @include card-style;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+
+    .bed-icon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        color: $gray;
+    }
+
+    .bed-number {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    &.occupied {
+        .bed-icon {
+            color: $danger;
+        }
+
+        border: 1px solid lighten($danger, 30%);
+        background-color: lighten($danger, 45%);
+    }
+
+    &.free {
+        .bed-icon {
+            color: $success;
+        }
+
+        border: 1px solid lighten($success, 30%);
+    }
+
+    &.cleaning {
+        .bed-icon {
+            color: $warning;
+        }
+
+        border: 1px solid lighten($warning, 30%);
+        background-color: lighten($warning, 50%);
+    }
+}
+
+// Medication Table
+.med-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: $shadow-sm;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    th {
+        background-color: lighten($accent, 55%);
+        color: $accent;
+        font-weight: 600;
+    }
+
+    tr:hover {
+        background-color: #fafafa;
+    }
+}

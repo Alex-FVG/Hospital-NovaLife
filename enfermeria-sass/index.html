@@ -1,15 +1,82 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>enfermeria-sass</title>
-  </head>
-  <body>
-    <div id="app">
-      <h1>enfermeria-sass</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enfermería - Monitor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Vite handles SCSS injection via main.js or direct import in dev, but standard vite setup usually imports styling in JS -->
+  <!-- For simplicity in this vite setup, we will use a script module to import the scss if not already set -->
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="brand">Enfermería</div>
+      <div class="nav-links">
+        <a href="../home.html">Inicio</a>
+        <a href="index.html" class="active">Monitor</a>
+        <a href="mapa-camas.html">Mapa de Camas</a>
+        <a href="hoja-medicacion.html">Medicación</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="page-title">Monitor de Signos Vitales</h1>
+
+      <div class="dashboard-grid">
+        <!-- Patient 1 -->
+        <div class="vital-card">
+          <h3>Paciente: Juan Pérez (Cama 101)</h3>
+          <div class="value" style="color:#e74c3c;">82 <span class="unit">bpm</span></div>
+          <p>Frecuencia Cardíaca</p>
+          <div
+            style="margin-top:1rem; border-top:1px solid #eee; padding-top:0.5rem; display:flex; justify-content:space-between;">
+            <span>Temp: <strong>36.5°C</strong></span>
+            <span>SpO2: <strong>98%</strong></span>
+          </div>
+        </div>
+
+        <!-- Patient 2 -->
+        <div class="vital-card">
+          <h3>Paciente: Maria Garcia (Cama 102)</h3>
+          <div class="value" style="color:#2ecc71;">74 <span class="unit">bpm</span></div>
+          <p>Frecuencia Cardíaca</p>
+          <div
+            style="margin-top:1rem; border-top:1px solid #eee; padding-top:0.5rem; display:flex; justify-content:space-between;">
+            <span>Temp: <strong>37.0°C</strong></span>
+            <span>SpO2: <strong>99%</strong></span>
+          </div>
+        </div>
+
+        <!-- Patient 3 -->
+        <div class="vital-card">
+          <h3>Paciente: Carlos Lopez (Cama 103)</h3>
+          <div class="value" style="color:#f1c40f;">95 <span class="unit">bpm</span></div>
+          <p>Frecuencia Cardíaca</p>
+          <div
+            style="margin-top:1rem; border-top:1px solid #eee; padding-top:0.5rem; display:flex; justify-content:space-between;">
+            <span>Temp: <strong>38.2°C</strong></span>
+            <span>SpO2: <strong>95%</strong></span>
+          </div>
+        </div>
+        <!-- Patient 4 -->
+        <div class="vital-card">
+          <h3>Paciente: Ana Martinez (Cama 104)</h3>
+          <div class="value" style="color:#e74c3c;">110 <span class="unit">bpm</span></div>
+          <p>Frecuencia Cardíaca - ALERTA</p>
+          <div
+            style="margin-top:1rem; border-top:1px solid #eee; padding-top:0.5rem; display:flex; justify-content:space-between;">
+            <span>Temp: <strong>39.1°C</strong></span>
+            <span>SpO2: <strong>91%</strong></span>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="./main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>

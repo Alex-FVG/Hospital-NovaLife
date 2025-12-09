@@ -1,62 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>NovaLife - Panel Principal</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hospital NovaLife</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header class="header container">
-<div class="brand">Hospital NovaLife</div>
-<div class="nav-links">
-<a class="btn btn-ghost" href="home.html">Inicio</a>
-<a class="btn btn-ghost" href="funcionalidades/prescripcion/citas-lista.html">Prescripciones</a>
-<a class="btn btn-ghost" href="guia-estilos.html">Guía de estilos</a>
-</div>
-</header>
 
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-primary" style="font-weight:700; font-size:1.5rem;">NovaLife</span>
+                <span class="text-muted">|</span>
+                <span style="font-weight:500;">Panel Principal</span>
+            </div>
+            <div class="nav-links flex items-center">
+                <span class="text-sm text-muted" style="margin-right: 1rem;">Bienvenido, Usuario</span>
+                <a href="index.html" class="btn btn-ghost" style="padding: 0.5rem 1rem;">Salir</a>
+            </div>
+        </div>
+    </header>
 
-<main class="main container">
-<div class="dashboard-hero">
-<div>
-<h1>Panel de control del personal sanitario</h1>
-</div>
-<div>
-<button class="btn btn-primary">Nueva nota</button>
-</div>
-</div>
+    <main class="container" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <div style="margin-bottom: 2rem;">
+            <h1>Seleccione un Módulo</h1>
+            <p class="text-muted">Acceda a las herramientas de gestión clínica y administrativa.</p>
+        </div>
 
+        <div class="module-grid">
+            <!-- Enfermeria Module Card -->
+            <a href="enfermeria-sass/index.html" class="card" style="text-decoration: none; color: inherit;">
+                <div class="module-card-icon" style="color: #10B981;">
+                    <!-- Simple SVG Icon for Nursing -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 0 0 5 2h14a.3.3 0 0 0 .2.3l-2.8 2.5v9.1c0 1.5 1 2.9 2.5 3.4l.1.1a10.2 10.2 0 0 1-5 2.1c-.8.1-1.6.1-2.4 0a10.2 10.2 0 0 1-5-2.1l.1-.1c1.5-.5 2.5-1.9 2.5-3.4V4.8L4.8 2.3z"/><line x1="12" y1="9" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+                </div>
+                <h3>Enfermería</h3>
+                <p class="text-muted">Gestión de pacientes, monitoreo de signos vitales, mapa de camas y medicación.</p>
+                <div style="margin-top: 1.5rem;">
+                    <span class="text-primary text-sm font-weight-bold">Acceder &rarr;</span>
+                </div>
+            </a>
 
-<section class="card-grid">
-<a class="card" href="funcionalidades/prescripcion/citas-lista.html">
-<div class="card-title">Listado de Citas</div>
-<div class="card-subtitle">Ver y gestionar citas</div>
-</a>
+            <!-- Urgencias Module Card -->
+            <a href="urgencias-tailwind-vite/index.html" class="card" style="text-decoration: none; color: inherit;">
+                <div class="module-card-icon" style="color: #EF4444;">
+                    <!-- Simple SVG Icon for Emergency -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3>Urgencias</h3>
+                <p class="text-muted">Triaje, registro de admisiones, y control de flujo de urgencias en tiempo real.</p>
+                <div style="margin-top: 1.5rem;">
+                    <span class="text-primary text-sm font-weight-bold">Acceder &rarr;</span>
+                </div>
+            </a>
+            
+            <!-- Placeholder for future modules -->
+            <div class="card" style="opacity: 0.6; cursor: not-allowed;">
+                <div class="module-card-icon" style="color: #64748B;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </div>
+                <h3>Administración</h3>
+                <p class="text-muted">Módulo en mantenimiento.</p>
+            </div>
+        </div>
+    </main>
 
-
-<a class="card" href="funcionalidades/prescripcion/buscador-pacientes.html">
-<div class="card-title">Búsqueda de Pacientes</div>
-<div class="card-subtitle">Pacientes sin cita</div>
-</a>
-
-
-<a class="card" href="funcionalidades/prescripcion/historia-clinica.html">
-<div class="card-title">Historia Clínica</div>
-<div class="card-subtitle">Registro y antecedentes</div>
-</a>
-
-<a class="card" href="./enfermeria-sass/dist/index.html">
-<div class="card-title">Enfermeria</div>
-<div class="card-subtitle">Módulo de admisión Sass</div>
-</a>
-
-<a class="card" href=".//urgencias-tailwind-vite/">
-<div class="card-title">Urgencias</div>
-<div class="card-subtitle">Módulo con tailwind</div>
-</a>
-</section>
-</main>
 </body>
 </html>
